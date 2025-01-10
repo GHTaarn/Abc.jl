@@ -1,0 +1,11 @@
+name = "Abc"
+uuid = "1850a3e4-1788-4245-9280-fd9b3527b13f"
+authors = ["GHTaarn <62629455+GHTaarn@users.noreply.github.com>"]
+version = "0.1.0"
+
+[weakdeps]
+JLD = "4138dd39-2aa7-5051-a626-17a0bb65d9c8"
+
+[extensions]
+JLDExt = "JLD"
+
