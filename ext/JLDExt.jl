@@ -4,8 +4,6 @@ using Abc, JLD
 import JLD.writeas
 import JLD.readas
 
-export JLDAb
-
 struct JLDAb
     a
 end
