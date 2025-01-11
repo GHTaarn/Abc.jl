@@ -13,7 +13,10 @@ end
 JLD.writeas(x::Ab) = writeas(JLDAb(x.a))
 JLD.readas(x::JLDAb) = Ab(x.a)
 
-__init__() = @info "Loaded JLDExt"
+function __init__()
+    @async Abc.set_jldext()
+    @info "Loaded JLDExt"
+end
 
 end
 
