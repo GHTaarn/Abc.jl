@@ -4,8 +4,6 @@ using Abc, JLD
 import JLD.writeas
 import JLD.readas
 
-export JLDAb
-
 struct JLDAb
     a
 end
@@ -13,7 +11,10 @@ end
 JLD.writeas(x::Ab) = writeas(JLDAb(x.a))
 JLD.readas(x::JLDAb) = Ab(x.a)
 
-__init__() = @info "Loaded JLDExt"
+function __init__()
+    Abc.set_jldext(JLDExt)
+    @info "Loaded JLDExt"
+end
 
 end
 
